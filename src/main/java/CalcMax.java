@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class CalcMax {
     /**
      * Gets a number from the user.
@@ -10,22 +8,7 @@ public class CalcMax {
      */
     // @staticmethod
     // def getValidInteger(prompt: str) -> int:
-    public static int getValidInteger(String prompt){
-        Scanner input = new Scanner(System.in);
 
-        int value = 0;
-        while(true) {
-            System.out.println(prompt);
-            if (input.hasNextInt()) {
-                value = input.nextInt();
-                break;
-            } else {
-                System.out.println("Please enter an _integer_");
-                input.nextLine();
-            }
-        }
-        return value;
-    }
 
     public static int findMax(int[] numbers) {
         int max = 0;
@@ -37,29 +20,12 @@ public class CalcMax {
         return max;
     }
 
-    public static int getValidInteger(String prompt, int lowerBound, int upperBound) {
-        Scanner input = new Scanner(System.in);
 
-        int value = 0;
-        while(true) {
-            System.out.println(prompt);
-            if (input.hasNextInt() ) {
-                value = input.nextInt();
-                if (value < lowerBound || value > upperBound) {
-                    break;
-                }
-            } else {
-                System.out.println("Please enter an _integer_");
-                input.nextLine();
-            }
-        }
-        return value;
-    }
 
     public static void main(String[] args) {
-        int num1 = getValidInteger("Please enter an integer:", 1, 20);
-        int num2 = getValidInteger("Please enter an integer:");
-        int num3 = getValidInteger("Please enter an integer:");
+        int num1 = InputUtility.getValidInteger("Please enter an integer:", 1, 20);
+        int num2 = InputUtility.getValidInteger("Please enter an integer:");
+        int num3 = InputUtility.getValidInteger("Please enter an integer:");
 
         int[] nums = {num1, num2, num3};
 
