@@ -34,17 +34,36 @@ public class CalcMax {
                 max = number;
             }
         }
-        System.out.println(max);
         return max;
     }
 
+    public static int getValidInteger(String prompt, int lowerBound, int upperBound) {
+        Scanner input = new Scanner(System.in);
+
+        int value = 0;
+        while(true) {
+            System.out.println(prompt);
+            if (input.hasNextInt() ) {
+                value = input.nextInt();
+                if (value < lowerBound || value > upperBound) {
+                    break;
+                }
+            } else {
+                System.out.println("Please enter an _integer_");
+                input.nextLine();
+            }
+        }
+        return value;
+    }
+
     public static void main(String[] args) {
-        int num1 = getValidInteger("Please enter an integer:");
+        int num1 = getValidInteger("Please enter an integer:", 1, 20);
         int num2 = getValidInteger("Please enter an integer:");
         int num3 = getValidInteger("Please enter an integer:");
 
         int[] nums = {num1, num2, num3};
 
-        findMax(nums);
+        System.out.println(findMax(nums));
+
     }
 }
