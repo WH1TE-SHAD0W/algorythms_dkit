@@ -1,15 +1,12 @@
+package numberInput;
+
 public class CalcMax {
     /**
-     * Gets a number from the user.
-     *
-     * The user is required to keep entering data until a valid integer is supplied
-     * @param prompt The prompt text displayed to the user
-     * @return The first valid integer entered by the user
+     * Finds the highest value in array.
+     * Takes in an array and loops through to find out the value of highest number.
+     * @param numbers The prompt text displayed to the user
+     * @return The max value
      */
-    // @staticmethod
-    // def getValidInteger(prompt: str) -> int:
-
-
     public static int findMax(int[] numbers) {
         int max = 0;
         for (int number : numbers) {
@@ -20,9 +17,7 @@ public class CalcMax {
         return max;
     }
 
-
-
-    public static void main(String[] args) {
+    static void main() {
         int num1 = InputUtility.getValidInteger("Please enter an integer:", 1, 20);
         int num2 = InputUtility.getValidInteger("Please enter an integer:");
         int num3 = InputUtility.getValidInteger("Please enter an integer:");
