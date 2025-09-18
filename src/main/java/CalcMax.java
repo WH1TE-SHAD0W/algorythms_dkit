@@ -27,16 +27,12 @@ public class CalcMax {
         return value;
     }
 
-    public static int findMax(int input1,  int input2,  int input3) {
-
-
+    public static int findMax(int[] numbers) {
         int max = 0;
-        if (input1 > input2 && input1 > input3) {
-            max = input1;
-        } else if (input2 > input1 && input2 > input3) {
-            max = input2;
-        } else if (input3 > input1 && input3 > input2) {
-            max = input3;
+        for (int number : numbers) {
+            if (number > max) {
+                max = number;
+            }
         }
         System.out.println(max);
         return max;
@@ -47,6 +43,8 @@ public class CalcMax {
         int num2 = getValidInteger("Please enter an integer:");
         int num3 = getValidInteger("Please enter an integer:");
 
-        findMax(num1, num2, num3);
+        int[] nums = {num1, num2, num3};
+
+        findMax(nums);
     }
 }
