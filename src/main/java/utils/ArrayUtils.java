@@ -11,4 +11,16 @@ public class ArrayUtils {
             System.out.print(index + " ");
         }
     }
+
+    /**
+     * Displays all values within the array.
+     * Loops through with a for loop and displays the index with value.
+     * @param arr An array of strings
+     */
+    static void displayArray(String[] arr) {
+        for (String index : arr) {
+            System.out.print(index + " ");
+        }
+    }
+
 }
