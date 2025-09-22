@@ -10,6 +10,7 @@ public class ArrayUtils {
         for (int index : arr) {
             System.out.print(index + " ");
         }
+        System.out.print("\n");
     }
 
     /**
@@ -21,6 +22,29 @@ public class ArrayUtils {
         for (String index : arr) {
             System.out.print(index + " ");
         }
+        System.out.print("\n");
     }
 
+    /**
+     * Calculates the average.
+     * Creates the sum with a for loop and the divides it with the length of input array.
+     * @param arr An array of integers
+     */
+    static int calcArray(int[] arr) {
+        int avg;
+        int sum = 0;
+        for (int index : arr) {
+            sum += index;
+        }
+        avg = sum / arr.length;
+        return avg;
+    }
+
+    static void main() {
+        displayArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        displayArray(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"});
+        System.out.println(calcArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9}));
+        System.out.println('\n');
+
+    }
 }
