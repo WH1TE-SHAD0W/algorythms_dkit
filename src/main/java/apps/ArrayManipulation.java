@@ -14,12 +14,12 @@ public class ArrayManipulation {
             intArray[i] = InputUtility.getValidInteger("Please enter an integer:", 1, 100);
         }
         ArrayUtils.displayArray(intArray);
-        System.out.println(ArrayUtils.findMax(intArray));
-        System.out.println(ArrayUtils.findMin(intArray));
-        System.out.println(ArrayUtils.count(intArray, 5));
-        System.out.println(ArrayUtils.getMostFrequent(intArray));
-        System.out.println(ArrayUtils.countGreater(intArray, 5));
-        System.out.println(ArrayUtils.countGreaterThanAverage(intArray));
+        System.out.println("Maximum int in array: " + ArrayUtils.findMax(intArray));
+        System.out.println("Minimum int: " + ArrayUtils.findMin(intArray));
+        System.out.println("Count of instances of 5: " + ArrayUtils.count(intArray, 5));
+        System.out.println("Most frequent number: " + ArrayUtils.getMostFrequent(intArray));
+        System.out.println("Count greater than 5: " + ArrayUtils.countGreater(intArray, 5));
+        System.out.println("Count greater than average: " + ArrayUtils.countGreaterThanAverage(intArray));
 
         String[] stringArray = new String[0];
         for (int i = 0; i < 10; i++) {
