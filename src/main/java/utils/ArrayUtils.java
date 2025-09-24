@@ -40,7 +40,7 @@ public class ArrayUtils {
         return avg;
     }
 
-    static int  findMax(int[] arr) {
+    public static int  findMax(int[] arr) {
         int max = 0;
         for (int index : arr) {
             if(index > max)
@@ -48,7 +48,7 @@ public class ArrayUtils {
         }
         return max;
     }
-    static String  findMax(String[] arr) {
+    public static String  findMax(String[] arr) {
         String max = arr[0];
         for (String index : arr) {
             if(index.compareTo(max) < 0) {
@@ -58,7 +58,7 @@ public class ArrayUtils {
         return max;
     }
 
-    static int  findMin(int[] arr) {
+    public static int  findMin(int[] arr) {
         int min = findMax(arr);
         for (int index : arr) {
             if(index > 0) {
@@ -67,7 +67,7 @@ public class ArrayUtils {
         }
         return min;
     }
-    static String  findMin(String[] arr) {
+    public static String  findMin(String[] arr) {
         String min = findMax(arr);
         for (String index : arr) {
             if(index.compareTo(min) > 0) {
@@ -77,9 +77,15 @@ public class ArrayUtils {
         return min;
     }
 
-
-
-
+    public static int count(int[] arr, int Value) {
+        int count = 0;
+        for (int index : arr) {
+            if (index == Value) {
+                count++;
+            }
+        }
+        return count;
+    }
 
 
 

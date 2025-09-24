@@ -16,6 +16,7 @@ public class ArrayManipulation {
         ArrayUtils.displayArray(intArray);
         System.out.println(ArrayUtils.findMax(intArray));
         System.out.println(ArrayUtils.findMin(intArray));
+        System.out.println(ArrayUtils.count(intArray, 5));
 
         String[] stringArray = new String[0];
         for (int i = 0; i < 10; i++) {
@@ -24,6 +25,5 @@ public class ArrayManipulation {
 
         System.out.println(ArrayUtils.findMax(stringArray));
         System.out.println(ArrayUtils.findMin(stringArray));
-
     }
 }
