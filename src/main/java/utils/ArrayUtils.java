@@ -40,6 +40,15 @@ public class ArrayUtils {
         return avg;
     }
 
+    static int  findMax(int[] arr) {
+        int max = 0;
+        for (int index : arr) {
+            if(index > max)
+                max = index;
+        }
+        return max;
+    }
+
     static void main() {
         displayArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
         displayArray(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"});
