@@ -6,7 +6,7 @@ public class ArrayUtils {
      * Loops through with a for loop and displays the index with value.
      * @param arr An array of integers
      */
-    static void displayArray(int[] arr) {
+    public static void displayArray(int[] arr) {
         for (int index : arr) {
             System.out.print(index + " ");
         }
