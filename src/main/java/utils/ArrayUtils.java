@@ -107,6 +107,24 @@ public class ArrayUtils {
         return count;
     }
 
+    public static int countGreaterThanAverage(int[] arr) {
+        int avg;
+        int count = 0;
+        int sum = 0;
+
+        for (int index : arr) {
+            sum += index;
+        }
+        avg = sum / arr.length;
+
+        for (int index : arr) {
+            if (countGreater(arr, index) > avg) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 
     static void main() {
         displayArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
