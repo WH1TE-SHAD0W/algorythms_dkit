@@ -48,6 +48,17 @@ public class ArrayUtils {
         }
         return max;
     }
+    static String  findMax(String[] arr) {
+        String max = arr[0];
+        for (String index : arr) {
+            if(index.compareTo(max) < 0) {
+                max = index;
+            }
+        }
+        return max;
+    }
+
+
 
     static void main() {
         displayArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
