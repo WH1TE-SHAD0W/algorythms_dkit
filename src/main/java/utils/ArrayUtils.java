@@ -87,6 +87,17 @@ public class ArrayUtils {
         return count;
     }
 
+    public static int getMostFrequent(int[] arr) {
+        int freq = 0;
+        for (int index : arr) {
+            if (count(arr, index) > freq)  {
+                freq = count(arr, index);
+            }
+        }
+        return freq;
+    }
+
+
 
 
     static void main() {
