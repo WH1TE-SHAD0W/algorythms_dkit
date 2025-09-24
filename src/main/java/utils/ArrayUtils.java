@@ -58,6 +58,29 @@ public class ArrayUtils {
         return max;
     }
 
+    static int  findMin(int[] arr) {
+        int min = findMax(arr);
+        for (int index : arr) {
+            if(index > 0) {
+                min = index;
+            }
+        }
+        return min;
+    }
+    static String  findMin(String[] arr) {
+        String min = findMax(arr);
+        for (String index : arr) {
+            if(index.compareTo(min) > 0) {
+                min = index;
+            }
+        }
+        return min;
+    }
+
+
+
+
+
 
 
     static void main() {

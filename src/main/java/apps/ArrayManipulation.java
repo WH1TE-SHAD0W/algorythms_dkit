@@ -12,6 +12,5 @@ public class ArrayManipulation {
             intArray[i] = InputUtility.getValidInteger("Please enter an integer:", 1, 100);
         }
         ArrayUtils.displayArray(intArray);
-
     }
 }
