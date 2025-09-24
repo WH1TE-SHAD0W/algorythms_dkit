@@ -97,7 +97,15 @@ public class ArrayUtils {
         return freq;
     }
 
-
+    public static int countGreater(int[] arr, int Value) {
+        int count = 0;
+        for (int index : arr) {
+            if (index > Value) {
+                count++;
+            }
+        }
+        return count;
+    }
 
 
     static void main() {

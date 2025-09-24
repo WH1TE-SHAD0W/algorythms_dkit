@@ -18,6 +18,7 @@ public class ArrayManipulation {
         System.out.println(ArrayUtils.findMin(intArray));
         System.out.println(ArrayUtils.count(intArray, 5));
         System.out.println(ArrayUtils.getMostFrequent(intArray));
+        System.out.println(ArrayUtils.countGreater(intArray, 5));
 
         String[] stringArray = new String[0];
         for (int i = 0; i < 10; i++) {
