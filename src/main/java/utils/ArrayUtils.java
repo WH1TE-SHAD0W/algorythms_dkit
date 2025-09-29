@@ -7,10 +7,35 @@ public class ArrayUtils {
      * @param arr An array of integers
      */
     public static void displayArray(int[] arr) {
+        nullValidateArray(arr);
+        lengthValidateArray(arr);
         for (int index : arr) {
             System.out.print(index + " ");
         }
         System.out.print("\n");
+    }
+
+    private static void nullValidateArray(int[] arr) {
+        if (arr == null) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+    }
+
+    private static void lengthValidateArray(String[] arr) {
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+    }
+    private static void nullValidateArray(String[] arr) {
+        if (arr == null) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+    }
+
+    private static void lengthValidateArray(int[] arr) {
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
     }
 
     /**
@@ -19,11 +44,15 @@ public class ArrayUtils {
      * @param arr An array of strings
      */
     static void displayArray(String[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         for (String index : arr) {
             System.out.print(index + " ");
         }
         System.out.print("\n");
     }
+
+
 
     /**
      * Calculates the average.
@@ -31,6 +60,8 @@ public class ArrayUtils {
      * @param arr An array of integers
      */
     static int calcArray(int[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         int avg;
         int sum = 0;
         for (int index : arr) {
@@ -41,6 +72,8 @@ public class ArrayUtils {
     }
 
     public static int  findMax(int[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         int max = 0;
         for (int index : arr) {
             if(index > max)
@@ -49,6 +82,8 @@ public class ArrayUtils {
         return max;
     }
     public static String  findMax(String[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         String max = arr[0];
         for (String index : arr) {
             if(index.compareTo(max) < 0) {
@@ -59,6 +94,8 @@ public class ArrayUtils {
     }
 
     public static int  findMin(int[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         int min = findMax(arr);
         for (int index : arr) {
             if(index > 0) {
@@ -68,6 +105,8 @@ public class ArrayUtils {
         return min;
     }
     public static String  findMin(String[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         String min = findMax(arr);
         for (String index : arr) {
             if(index.compareTo(min) > 0) {
@@ -78,6 +117,8 @@ public class ArrayUtils {
     }
 
     public static int count(int[] arr, int Value) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         int count = 0;
         for (int index : arr) {
             if (index == Value) {
@@ -88,6 +129,8 @@ public class ArrayUtils {
     }
 
     public static int getMostFrequent(int[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         int freq = 0;
         for (int index : arr) {
             if (count(arr, index) > freq)  {
@@ -98,6 +141,8 @@ public class ArrayUtils {
     }
 
     public static int countGreater(int[] arr, int Value) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         int count = 0;
         for (int index : arr) {
             if (index > Value) {
@@ -108,6 +153,8 @@ public class ArrayUtils {
     }
 
     public static int countGreaterThanAverage(int[] arr) {
+        lengthValidateArray(arr);
+        nullValidateArray(arr);
         int avg;
         int count = 0;
         int sum = 0;
